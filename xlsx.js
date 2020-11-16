@@ -1200,9 +1200,14 @@ function read_date(blob, offset) {
 }
 
 var fs;
-function readFileSync(filename, options) {
+
+function getFs() {
 	if(fs === undefined) fs = require('fs');
-	return parse(fs.readFileSync(filename), options);
+	return fs
+}
+
+function readFileSync(filename, options) {
+	return parse(getFs().readFileSync(filename), options);
 }
 
 function readSync(blob, options) {
