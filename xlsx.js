@@ -2,7 +2,7 @@
 /* vim: set ts=2: */
 /*jshint -W041 */
 /*jshint funcscope:true, eqnull:true */
-var XLSX = {};
+var XLSX = {}, cptable;
 (function make_xlsx(XLSX){
 XLSX.version = '0.8.20';
 var current_codepage = 1200, current_cptable;
